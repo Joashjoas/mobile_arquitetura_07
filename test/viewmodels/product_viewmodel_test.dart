@@ -4,7 +4,6 @@ import 'package:mobile_arquitetura_01/core/errors/failure.dart';
 import 'package:mobile_arquitetura_01/domain/entities/product.dart';
 import 'package:mobile_arquitetura_01/domain/repositories/product_repository.dart';
 import 'package:mobile_arquitetura_01/presentation/viewmodels/product_viewmodel.dart';
-import 'package:mobile_arquitetura_01/presentation/viewmodels/product_state.dart';
 
 // Mock class for ProductRepository
 class MockProductRepository extends Mock implements ProductRepository {}
@@ -24,8 +23,8 @@ void main() {
 
   group('ProductViewModel', () {
     final testProducts = [
-      const Product(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg'),
-      const Product(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg'),
+      const Product(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg', description: 'Desc 1'),
+      const Product(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg', description: 'Desc 2'),
     ];
 
     test('Initial state should have isLoading as false and empty products', () {

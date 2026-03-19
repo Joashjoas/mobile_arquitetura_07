@@ -13,6 +13,9 @@ class Product {
   /// String da URL da imagem do produto.
   final String image;
 
+  /// Descrição detalhada do produto.
+  final String description;
+
   /// Indica se o produto está marcado como favorito.
   final bool favorite;
 
@@ -22,6 +25,7 @@ class Product {
     required this.title,
     required this.price,
     required this.image,
+    required this.description,
     this.favorite = false,
   });
 
@@ -31,6 +35,7 @@ class Product {
     String? title,
     double? price,
     String? image,
+    String? description,
     bool? favorite,
   }) {
     return Product(
@@ -38,6 +43,7 @@ class Product {
       title: title ?? this.title,
       price: price ?? this.price,
       image: image ?? this.image,
+      description: description ?? this.description,
       favorite: favorite ?? this.favorite,
     );
   }
@@ -51,13 +57,14 @@ class Product {
           title == other.title &&
           price == other.price &&
           image == other.image &&
+          description == other.description &&
           favorite == other.favorite;
 
   @override
-  int get hashCode => Object.hash(id, title, price, image, favorite);
+  int get hashCode => Object.hash(id, title, price, image, description, favorite);
 
   @override
   String toString() =>
-      'Product(id: $id, title: $title, price: $price, image: $image, favorite: $favorite)';
+      'Product(id: $id, title: $title, price: $price, image: $image, description: $description, favorite: $favorite)';
 }
 

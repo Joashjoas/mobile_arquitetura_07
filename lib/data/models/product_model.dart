@@ -9,6 +9,7 @@ class ProductModel extends Product {
     required super.title,
     required super.price,
     required super.image,
+    required super.description,
     super.favorite = false,
   });
 
@@ -56,6 +57,12 @@ class ProductModel extends Product {
       throw FormatException('Field "image" must be a string, got: ${image.runtimeType}');
     }
 
+    // Valida e obtém o campo 'description'
+    final description = json['description'] ?? '';
+    if (description is! String) {
+      throw FormatException('Field "description" must be a string, got: ${description.runtimeType}');
+    }
+
     // Obtém o campo 'favorite' (opcional, padrão false)
     final favorite = json['favorite'] as bool? ?? false;
 
@@ -64,6 +71,7 @@ class ProductModel extends Product {
       title: title,
       price: price.toDouble(),
       image: image,
+      description: description,
       favorite: favorite,
     );
   }
@@ -75,6 +83,7 @@ class ProductModel extends Product {
       'title': title,
       'price': price,
       'image': image,
+      'description': description,
       'favorite': favorite,
     };
   }
@@ -86,6 +95,7 @@ class ProductModel extends Product {
       title: product.title,
       price: product.price,
       image: product.image,
+      description: product.description,
       favorite: product.favorite,
     );
   }
@@ -97,6 +107,7 @@ class ProductModel extends Product {
       title: title,
       price: price,
       image: image,
+      description: description,
       favorite: favorite,
     );
   }

@@ -31,6 +31,7 @@ void main() {
           'title': 'Test Product',
           'price': 20,
           'image': 'http://example.com/image.jpg',
+          'description': 'Test Description',
         };
 
         // Act
@@ -76,6 +77,7 @@ void main() {
           'id': 1,
           'price': 19.99,
           'image': 'http://example.com/image.jpg',
+          'description': 'Test Description',
         };
 
         // Act & Assert
@@ -95,6 +97,7 @@ void main() {
           'id': 1,
           'title': 'Test Product',
           'image': 'http://example.com/image.jpg',
+          'description': 'Test Description',
         };
 
         // Act & Assert
@@ -114,6 +117,7 @@ void main() {
           'id': 1,
           'title': 'Test Product',
           'price': 19.99,
+          'description': 'Test Description',
         };
 
         // Act & Assert
@@ -174,6 +178,7 @@ void main() {
           'title': 'Test Product',
           'price': '19.99',
           'image': 'http://example.com/image.jpg',
+          'description': 'Test Description',
         };
 
         // Act & Assert

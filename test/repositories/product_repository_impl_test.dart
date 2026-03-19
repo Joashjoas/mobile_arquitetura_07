@@ -35,13 +35,13 @@ void main() {
 
   group('ProductRepositoryImpl', () {
     final testProductModels = [
-      const ProductModel(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg'),
-      const ProductModel(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg'),
+      const ProductModel(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg', description: 'Desc 1'),
+      const ProductModel(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg', description: 'Desc 2'),
     ];
 
     final testProducts = [
-      const Product(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg'),
-      const Product(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg'),
+      const Product(id: 1, title: 'Product 1', price: 10.0, image: 'http://example.com/1.jpg', description: 'Desc 1'),
+      const Product(id: 2, title: 'Product 2', price: 20.0, image: 'http://example.com/2.jpg', description: 'Desc 2'),
     ];
 
     group('getProducts', () {
